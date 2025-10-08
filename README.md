@@ -27,6 +27,13 @@ Verify your installation by running
 ```bash
 git --version
 ```
+
+### Config Git
+```
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
 ## 📂 After Cloning the Repository
 
 Once the project has been cloned, run the following commands in order:
