@@ -1,3 +1,45 @@
+# ☀️ PV Installation Guide
+
+This guide assumes you’re using **VS Code** as your code editor.
+
+---
+
+## 🧰 Installing PHP Tools
+
+_This includes PHP, Laravel, Laragon, and Herd._
+
+Follow **Dr. Walcott’s setup guide** to install all necessary tools.
+
+To verify your installation, run:
+
+```bash
+php -v
+```
+You should see an output of this PHP version:
+```
+PHP 8.4.12
+```
+## 🪜 Installing Git
+
+Download and install Git [here](https://git-scm.com/downloads)
+
+Verify your installation by running
+```bash
+git --version
+```
+## 📂 After Cloning the Repository
+
+Once the project has been cloned, run the following commands in order:
+```bash
+composer install
+copy .env.example .env
+php artisan key:generate
+php artisan migrate
+npm install
+npm run dev
+```
+
+# Laravel's ReadMe
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
