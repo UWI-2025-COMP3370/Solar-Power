@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@work.com',
             'password' => Hash::make('12345678'),
             'role' => 'piDSSAdministrator',
+            'email_verified_at' => now()
         ]);
 
         User::factory()->create([
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'technician@work.com',
             'password' => Hash::make('12345678'),
             'role' => 'piDSSTechnician',
+            'email_verified_at' => now()
         ]);
 
         User::factory()->create([
@@ -33,6 +35,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'sales@work.com',
             'password' => Hash::make('12345678'),
             'role' => 'piDSSSalesClerk',
+            'email_verified_at' => now()
         ]);
  
         $this->call([
