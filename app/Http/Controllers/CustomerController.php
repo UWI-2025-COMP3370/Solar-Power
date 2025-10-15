@@ -35,7 +35,7 @@ class CustomerController extends Controller
 
         Customer::create($validated);
 
-        return redirect()->route('customers.index')->with('success', 'Customer created successfully!');
+        return redirect()->route('customer.index')->with('success', 'Customer created successfully!');
     }
 
     // Show edit form
