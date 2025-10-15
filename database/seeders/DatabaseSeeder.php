@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'salesclerk',
             'email' => 'sales@work.com',
             'password' => Hash::make('12345678'),
-            'role' => 'piDSS Sales Clerk',
+            'role' => 'piDSSSalesClerk',
         ]);
  
         $this->call([
