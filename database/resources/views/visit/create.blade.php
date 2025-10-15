@@ -50,22 +50,13 @@
             <x-input-error :messages="$errors->get('roof_type')" class="mt-2" />
         </div>
 
-        <!-- Number of stories -->
+        <!-- Roof Type -->
         <div>
-            <x-input-label for="stories" :value="__('Stories')" />
-            <x-text-input id="stories" class="block mt-1 w-full"
-                type="text" name="stories" :value="old('stories')"
-                required autocomplete="stories" />
-            <x-input-error :messages="$errors->get('stories')" class="mt-2" />
-        </div>
-
-        <!-- Material -->
-        <div>
-            <x-input-label for="material" :value="__('Material')" />
-            <x-text-input id="material" class="block mt-1 w-full"
-                type="text" name="material" :value="old('material')"
-                required autocomplete="material" />
-            <x-input-error :messages="$errors->get('material')" class="mt-2" />
+            <x-input-label for="roof_type" :value="__('Roof Type')" />
+            <x-text-input id="roof_type" class="block mt-1 w-full"
+                type="text" name="roof_type" :value="old('roof_type')"
+                required autocomplete="roof_type" />
+            <x-input-error :messages="$errors->get('roof_type')" class="mt-2" />
         </div>
 
         <!-- Condition Type -->
@@ -84,15 +75,6 @@
                 type="number" step="0.01" name="monthly_consumption_kwh"
                 :value="old('monthly_consumption')" required autocomplete="monthly_consumption_kwh" />
             <x-input-error :messages="$errors->get('monthly_consumption')" class="mt-2" />
-        </div>
-
-        <!-- stories -->
-        <div>
-            <x-input-label for="stories" :value="__('stories')" />
-            <x-text-input id="stories" class="block mt-1 w-full"
-                type="number" step="0.01" name="stories"
-                :value="old('stories')" required autocomplete="stories" />
-            <x-input-error :messages="$errors->get('stories')" class="mt-2" />
         </div>
 
         <!-- Shaded -->

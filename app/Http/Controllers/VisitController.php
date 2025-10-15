@@ -44,6 +44,9 @@ class VisitController extends Controller
             'roof_size'=>$request->roof_size,
             'roof_type'=>$request->roof_type,
             'monthly_consumption_kwh'=>$request->monthly_consumption_kwh,
+            'material' =>$request->material,
+            'condition' =>$request->condition,
+            'stories' =>$request->stories,
             'shaded'=>$request->shaded,
             'notes'=>$request->notes,
         ]);
