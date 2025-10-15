@@ -21,7 +21,7 @@ return new class extends Migration
             $table->float('monthly_consumption_kwh');
             $table->string('material');
             $table->string('condition');
-            $table->int('stories');
+            $table->integer('stories');
             $table->boolean('shaded');
             $table->text('notes');
             $table->timestamps();
