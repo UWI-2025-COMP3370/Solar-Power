@@ -33,7 +33,7 @@ class VisitController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(VisitRequest $request): RedirectedResponse
+    public function store(VisitRequest $request): RedirectResponse
     {
         //Gate::authorize('create', Visit::class);
             
