@@ -40,7 +40,7 @@ class VisitController extends Controller
         Visit::create([
             'technician_name' =>$request->technician_name,
             'customer_name'=>$request->customer_name,
-            'customer_email'=>$request->email,
+            'customer_email'=>$request->customer_email,
             'roof_size'=>$request->roof_size,
             'roof_type'=>$request->roof_type,
             'monthly_consumption_kwh'=>$request->monthly_consumption_kwh,
