@@ -10,7 +10,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in as a: ") . Auth::user()->role }}
-                    @if(Auth::user()->role == 'piDSS Sales Clerk' || Auth::user()->role == 'piDSSAdministrator' )
+                    @if(Auth::user()->role == 'piDSSSalesClerk' || Auth::user()->role == 'piDSSAdministrator' )
                         <div>
                             <a href="{{ url('/customer') }}">Click to list customers in piDSS</a>
                         </div>
