@@ -16,7 +16,7 @@ class VisitController extends Controller
      */
     public function index(): View
     {
-        Gate::authorize('list', Visit::class);
+        Gate::authorize('view', Visit::class);
         return view('visit.index', ['visits' => Visits::all(), ]);
     }
 
