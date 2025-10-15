@@ -28,7 +28,7 @@ class VisitRequest extends FormRequest
             'roof_size' => 'required|numeric|min:0',
             'roof_type' => 'required|in:gable,hip,flat,other',
             'monthly_consumption_kwh' => 'required|numeric|min:0',
-            'shaded' => 'required|in:yes,no,partially',
+            'shaded' => 'required|in:Yes,No,Partially',
             'notes' => 'required|string|max:1000',
         ];
     }
