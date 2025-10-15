@@ -8,6 +8,7 @@ use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\VisitRequest;
 use Illuminate\Support\Facades\Gate;
+use DB;
 
 class VisitController extends Controller
 {
@@ -16,8 +17,8 @@ class VisitController extends Controller
      */
     public function index(): View
     {
-        Gate::authorize('view', Visit::class);
-        return view('visit.index', ['visits' => Visits::all(), ]);
+        //Gate::authorize('view', Visit::class);
+        return view('visit.index', ['visits' => Visit::all(), ]);
     }
 
     /**
@@ -25,7 +26,7 @@ class VisitController extends Controller
      */
     public function create(): View
     {
-        Gate::authorize('create', Visit::class);
+        //Gate::authorize('create', Visit::class);
         return view('visit.create');
     }
 
@@ -34,7 +35,7 @@ class VisitController extends Controller
      */
     public function store(VisitRequest $request): RedirectedResponse
     {
-        Gate::authorize('create', Visit::class);
+        //Gate::authorize('create', Visit::class);
             
         Visit::create([
             'technician_name' =>$request->technician_name,
@@ -55,7 +56,7 @@ class VisitController extends Controller
      */
     public function show(Visit $visit) : View
     {
-        Gate::authorize('view', $visit);
+        //Gate::authorize('view', $visit);
         return view('visit.show', ['visit' => $visit]);
     }
 
@@ -64,16 +65,29 @@ class VisitController extends Controller
      */
     public function edit(Visit $visit): View
     {
-        Gate::authorize('update', $visit);
+        //Gate::authorize('update', $visit);
         return view('visit.edit', ['visit' => $visit ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Visit $visit)
     {
-        //
+        //Gate::authorize('update', $visit);
+
+        $visit->update($request->only([
+            'technician_name',
+            'customer_name',
+            'customer_email',
+            'roof_size',
+            'roof_type',
+            'monthly_consumption_kwh',
+            'shaded',
+            'notes',
+        ]));
+
+        return redirect()->route('visit.index');
     }
 
     /**
