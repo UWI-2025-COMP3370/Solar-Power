@@ -22,4 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('customer', CustomerController::class);
 });
 
+Route::resource('visit', VisitController::class)
+    ->middleware(['auth', 'verified']);
+
 require __DIR__.'/auth.php';
