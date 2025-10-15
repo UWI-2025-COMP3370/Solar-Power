@@ -16,7 +16,8 @@
 
           <div class="mb-4">
                 <label for="address" class="block text-sm font-medium">Address</label>
-                <textarea id="address" name="address" rows="2" value="{{ old('address') }}"class="w-full border rounded p-2" required></textarea>
+                <textarea id="address" name="address" rows="2" class="w-full border rounded p-2" required>{{ old('address') }}</textarea>
+
 
                 @error('address')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
@@ -25,7 +26,7 @@
 
           <div class="mb-4">
                 <label for="mobile" class="block text-sm font-medium">Mobile Number</label>
-                <input type="text" id="mobile" name="mobile" value="{{ old('mobile') }}"class="w-full border rounded p-2" required>
+                <input type="text" id="mobile" name="mobile" value="{{ old('mobile') }}" class="w-full border rounded p-2" required>
 
                 @error('mobile')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
