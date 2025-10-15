@@ -15,6 +15,11 @@
                             <a href="{{ url('/customer') }}">Click to list customers in piDSS</a>
                         </div>
                     @endif
+                    @if(Auth::user()->role == 'piDSSTechnician' || Auth::user()->role == 'piDSSAdministrator' )
+                        <div>
+                            <a href="{{ url('/visit') }}">Click to list site visit information in piDSS</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
