@@ -52,10 +52,10 @@
 
         <!-- Monthly Consumption (kWh) -->
         <div>
-            <x-input-label for="monthly_consumption" :value="__('Monthly Consumption (kWh)')" />
-            <x-text-input id="monthly_consumption" class="block mt-1 w-full"
-                type="number" step="0.01" name="monthly_consumption"
-                :value="old('monthly_consumption')" required autocomplete="monthly_consumption" />
+            <x-input-label for="monthly_consumption_kwh" :value="__('Monthly Consumption (kWh)')" />
+            <x-text-input id="monthly_consumption_kwh" class="block mt-1 w-full"
+                type="number" step="0.01" name="monthly_consumption_kwh"
+                :value="old('monthly_consumption')" required autocomplete="monthly_consumption_kwh" />
             <x-input-error :messages="$errors->get('monthly_consumption')" class="mt-2" />
         </div>
 
