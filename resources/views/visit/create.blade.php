@@ -59,6 +59,15 @@
             <x-input-error :messages="$errors->get('monthly_consumption')" class="mt-2" />
         </div>
 
+        <!-- stories -->
+        <div>
+            <x-input-label for="stories" :value="__('stories')" />
+            <x-text-input id="stories" class="block mt-1 w-full"
+                type="number" step="0.01" name="stories"
+                :value="old('stories')" required autocomplete="stories" />
+            <x-input-error :messages="$errors->get('stories')" class="mt-2" />
+        </div>
+
         <!-- Shaded -->
         <div>
             <x-input-label for="shaded" :value="__('Shaded')" />
