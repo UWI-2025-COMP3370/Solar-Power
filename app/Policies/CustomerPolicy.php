@@ -14,7 +14,7 @@ class CustomerPolicy
     public function viewAny(User $user): bool
     {
         return $user->role == "piDSSAdministrator" || 
-            $user->role == "piDSS Sales Clerk";
+            $user->role == "piDSSSalesClerk";
     }
 
     /**
@@ -23,7 +23,7 @@ class CustomerPolicy
     public function view(User $user, Customer $customer): bool
     {
         return $user->role == "piDSSAdministrator" || 
-            $user->role == "piDSS Sales Clerk";
+            $user->role == "piDSSSalesClerk";
     }
 
     /**
@@ -32,7 +32,7 @@ class CustomerPolicy
     public function create(User $user): bool
     {
         return $user->role == "piDSSAdministrator" || 
-            $user->role == "piDSS Sales Clerk";
+            $user->role == "piDSSSalesClerk";
     }
 
     /**
@@ -41,7 +41,7 @@ class CustomerPolicy
     public function update(User $user, Customer $customer): bool
     {
         return $user->role == "piDSSAdministrator" || 
-            $user->role == "piDSS Sales Clerk";
+            $user->role == "piDSSSalesClerk";
     }
 
     /**
@@ -50,7 +50,7 @@ class CustomerPolicy
     public function delete(User $user, Customer $customer): bool
     {
         return $user->role == "piDSSAdministrator" || 
-            $user->role == "piDSS Sales Clerk";
+            $user->role == "piDSSSalesClerk";
     }
 
     /**
