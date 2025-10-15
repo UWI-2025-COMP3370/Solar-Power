@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::resource('customers', CustomerController::class);
+    Route::resource('customer', CustomerController::class);
 });
 
 require __DIR__.'/auth.php';
