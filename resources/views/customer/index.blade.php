@@ -8,7 +8,7 @@
           </div>
       @endif
 
-      <a href="{{ route('customers.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded mb-4 inline-block">Add Customer</a>
+      <a href="{{ route('customer.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded mb-4 inline-block">Add Customer</a>
 
       <table class="w-full border">
           <thead>
@@ -30,9 +30,9 @@
                       <td class="p-2 border">{{ $customer->telephone }}</td>
                       <td class="p-2 border">{{ $customer->email }}</td>
                       <td class="p-2 border">
-                          <a href="{{ route('customers.edit', $customer) }}" class="text-blue-600">Edit</a>
+                          <a href="{{ route('customer.edit', $customer) }}" class="text-blue-600">Edit</a>
                           
-                          <form action="{{ route('customers.destroy', $customer) }}" method="POST" class="inline">
+                          <form action="{{ route('customer.destroy', $customer) }}" method="POST" class="inline">
                               @csrf
                               @method('DELETE')
                               <button type="submit" class="text-red-600 ml-2" onclick="return confirm('Are you sure?')">Delete</button>
