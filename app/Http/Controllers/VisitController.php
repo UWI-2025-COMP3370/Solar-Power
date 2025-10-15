@@ -29,9 +29,6 @@ class VisitController extends Controller
         Gate::authorize('create', Visit::class);
         return view('visit.create');
     }
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
