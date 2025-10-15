@@ -2,7 +2,7 @@
   <div class="max-w-2xl mx-auto mt-8 bg-white p-6 rounded shadow">
       <h1 class="text-xl font-bold mb-4">Create Customer</h1>
 
-      <form method="POST" action="{{ route('customers.store') }}">
+      <form method="POST" action="{{ route('customer.store') }}">
           @csrf
           
           <div class="mb-4">

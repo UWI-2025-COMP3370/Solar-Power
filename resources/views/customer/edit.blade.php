@@ -2,7 +2,7 @@
   <div class="max-w-2xl mx-auto mt-8 bg-white p-6 rounded shadow">
       <h1 class="text-xl font-bold mb-4">Edit Customer</h1>
 
-      <form method="POST" action="{{ route('customers.update', $customer) }}">
+      <form method="POST" action="{{ route('customer.update', $customer) }}">
           @csrf
           @method('PUT')
 
