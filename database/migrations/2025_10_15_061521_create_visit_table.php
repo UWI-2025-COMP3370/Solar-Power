@@ -19,6 +19,9 @@ return new class extends Migration
             $table->float('roof_size');
             $table->enum('roof_type', ['flat', 'shed', 'gable', 'hip', 'dutch', 'mansard']);
             $table->float('monthly_consumption_kwh');
+            $table->string('material');
+            $table->string('condition');
+            $table->int('stories');
             $table->boolean('shaded');
             $table->text('notes');
             $table->timestamps();
