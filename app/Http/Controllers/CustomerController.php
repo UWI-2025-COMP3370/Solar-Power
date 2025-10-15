@@ -26,12 +26,17 @@ class CustomerController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'name'      => 'required|string|max:255',
-            'address'   => 'required|string',
-            'mobile'    => 'required|string|max:20',
-            'telephone' => 'nullable|string|max:20',
+            'name'      => 'required|string|max:255|regex:~^[a-zA-Z ]+$~',
+            'address'   => 'required|string|regex:~^[a-zA-Z0-9\s.,#-()\']+$~',
+            'mobile'    => 'required|string|max:20|min:7|regex:~^[0-9+ - /()]+$~',
+            'telephone' => 'nullable|string|max:20|min:7|regex:~^[0-9+ - /()]+$~',
             'email'     => 'required|email|unique:customers,email',
-        ]);
+        ],[
+            'name.regex' => 'The name may only contain letters, spaces, apostrophes, hyphens, and periods.',
+            'address.regex' => 'The address may only contain letters, numbers, spaces, commas, periods, #, parentheses, slashes, hyphens, and apostrophes.',
+            'mobile.regex' => 'The mobile number may only contain digits, spaces, plus (+), hyphens (-), slashes (/), and parentheses.',
+            'telephone.regex' => 'The telephone number may only contain digits, spaces, plus (+), hyphens (-), slashes (/), and parentheses.',
+    ]);
 
         Customer::create($validated);
 
@@ -48,12 +53,17 @@ class CustomerController extends Controller
     public function update(Request $request, Customer $customer): RedirectResponse
     {
         $validated = $request->validate([
-            'name'      => 'required|string|max:255',
-            'address'   => 'required|string',
-            'mobile'    => 'required|string|max:20',
-            'telephone' => 'nullable|string|max:20',
-            'email'     => 'required|email|unique:customers,email,' . $customer->id,
-        ]);
+            'name'      => 'required|string|max:255|regex:~^[a-zA-Z ]+$~',
+            'address'   => 'required|string|regex:~^[a-zA-Z0-9\s.,#-()\']+$~',
+            'mobile'    => 'required|string|max:20|min:7|regex:~^[0-9+ - /()]+$~',
+            'telephone' => 'nullable|string|max:20|min:7|regex:~^[0-9+ - /()]+$~',
+            'email'     => 'required|email|unique:customers,email' . $customer->id,
+        ],[
+            'name.regex' => 'The name may only contain letters, spaces, apostrophes, hyphens, and periods.',
+            'address.regex' => 'The address may only contain letters, numbers, spaces, commas, periods, #, parentheses, slashes, hyphens, and apostrophes.',
+            'mobile.regex' => 'The mobile number may only contain digits, spaces, plus (+), hyphens (-), slashes (/), and parentheses.',
+            'telephone.regex' => 'The telephone number may only contain digits, spaces, plus (+), hyphens (-), slashes (/), and parentheses.',
+    ]);
 
         $customer->update($validated);
 
