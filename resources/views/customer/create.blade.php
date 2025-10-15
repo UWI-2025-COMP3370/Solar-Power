@@ -7,7 +7,7 @@
           
           <div class="mb-4">
                 <label for="name" class="block text-sm font-medium">Customer Name</label>
-                <input type="text" id="name" name="name" class="w-full border rounded p-2" required>
+                <input type="text" id="name" name="name" value="{{ old('name') }}" class="w-full border rounded p-2" required>
 
                 @error('name')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
@@ -16,7 +16,7 @@
 
           <div class="mb-4">
                 <label for="address" class="block text-sm font-medium">Address</label>
-                <textarea id="address" name="address" rows="2" class="w-full border rounded p-2" required></textarea>
+                <textarea id="address" name="address" rows="2" value="{{ old('address') }}"class="w-full border rounded p-2" required></textarea>
 
                 @error('address')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
@@ -25,7 +25,7 @@
 
           <div class="mb-4">
                 <label for="mobile" class="block text-sm font-medium">Mobile Number</label>
-                <input type="text" id="mobile" name="mobile" class="w-full border rounded p-2" required>
+                <input type="text" id="mobile" name="mobile" value="{{ old('mobile') }}"class="w-full border rounded p-2" required>
 
                 @error('mobile')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
@@ -34,7 +34,7 @@
 
           <div class="mb-4">
                 <label for="telephone" class="block text-sm font-medium">Telephone Number (House)</label>
-                <input type="text" id="telephone" name="telephone" class="w-full border rounded p-2">
+                <input type="text" id="telephone" name="telephone" value="{{ old('telephone') }}"class="w-full border rounded p-2">
 
                 @error('telephone')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
@@ -43,7 +43,7 @@
 
           <div class="mb-4">
                 <label for="email" class="block text-sm font-medium">Email Address</label>
-                <input type="email" id="email" name="email" class="w-full border rounded p-2" required>
+                <input type="email" id="email" name="email" value="{{ old('email') }}"class="w-full border rounded p-2" required>
 
                 @error('email')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
