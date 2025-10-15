@@ -12,7 +12,7 @@
                     {{ __("You're logged in as a: ") . Auth::user()->role }}
                     @if(Auth::user()->role == 'piDSS Sales Clerk' || Auth::user()->role == 'piDSSAdministrator' )
                         <div>
-                            <a href="{{ url('/customers') }}">Click to list customers in piDSS</a>
+                            <a href="{{ url('/customer') }}">Click to list customers in piDSS</a>
                         </div>
                     @endif
                 </div>
