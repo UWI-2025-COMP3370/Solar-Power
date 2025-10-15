@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Visit; // include the Visit model
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\View\View;
 use App\Http\Requests\VisitRequest;
 use Illuminate\Support\Facades\Gate;
 
