@@ -57,7 +57,7 @@ class CustomerController extends Controller
             'address'   => 'required|string|regex:~^[a-zA-Z0-9\s.,#-()\']+$~',
             'mobile'    => 'required|string|max:20|min:7|regex:~^[0-9+ - /()]+$~',
             'telephone' => 'nullable|string|max:20|min:7|regex:~^[0-9+ - /()]+$~',
-            'email'     => 'required|email|unique:customers,email' . $customer->id,
+            'email'     => 'required|email|unique:customers,email,' . $customer->id,
         ],[
             'name.regex' => 'The name may only contain letters, spaces, apostrophes, hyphens, and periods.',
             'address.regex' => 'The address may only contain letters, numbers, spaces, commas, periods, #, parentheses, slashes, hyphens, and apostrophes.',
