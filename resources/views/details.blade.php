@@ -33,25 +33,26 @@
         <div class="max-w-7xl mx-auto p-6 lg:p-8 dark:text-white">
 
             <details>
-                <summary> A solar hotovoltaic (PV) system is a technology that converts sunlight directly into
-                    electricity using solar panels composed of photovoltaic cells.
+                <summary> What are solar photovoltaic (PV) systems?
                 </summary>
 
-                <p>It essentially transforms light
-                    energy from the sun into usable electrical energy that can power homes, businesses and industries. A
-                    solar PV system consists of several key components that work together to generate, manage and
-                    deliver power. These include solar panels, an inverter, a mounting structure and cabling.
-                    Additionally, batteries and charge controllers are often used.
+                <p>A solar photovoltaic (PV) system is a technology that converts sunlight directly into
+                    electricity using solar panels composed of photovoltaic cells. It essentially transforms light
+                    energy from the sun into usable electrical energy that can power homes, businesses and industries. 
                 </p>
             </details>
             <br>
             <details>
                 <summary>
+                    What are the components of a solar PV system?
+                </summary>
+                <p>
+                    A solar PV system consists of several key components that work together to generate, manage and
+                    deliver power. These include solar panels, an inverter, a mounting structure and cabling.
                     Each solar panel contains many small
                     photovoltaic cells made of semiconductor materials, such as silicon, and these cells absorb sunlight
                     and generate direct current (DC) electricity.
-                </summary>
-                <p>
+                    Additionally, batteries and charge controllers are often used.
                     DC electricity is electricity that flows steadily in a
                     single direction through a conductor.
                     Since most electrical appliances and grid systems operate on alternating current (AC), the DC
@@ -69,10 +70,11 @@
             <br>
             <details>
                 <summary>
-                    Solar PV systems can be divided into three main types: grid-tied, off-grid and hybrid systems.
+                    How many types of solar PV systems are there?
 
                 </summary>
                 <p>
+                    Solar PV systems can be divided into three main types: grid-tied, off-grid and hybrid systems.
                     Grid-tied systems are connected to the public electricity grid which allow users to feed excess power back
                     into
                     the grid. Off-grid systems operate independently from the public grid and rely on batteries for
@@ -84,8 +86,11 @@
             <br>
             <details>
                 <summary>
-                    Benefits of PV systems:
+                    What are the benefits of solar PV sysytems?
                 </summary>
+                <p>
+                    Benefits of solar PV systems:
+                </p>
 
                 <ul class="list-disc list-inside">
                     <li>Solar PV systems generate free electricity from sunlight, reducing your reliance on the utility grid.</li>
