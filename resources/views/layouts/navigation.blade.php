@@ -15,9 +15,17 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('customer.index')" :active="request()->routeIs('dashboard')">
-                        {{ __('Customer Records') }}
-                    </x-nav-link>
+                    @if(Auth::user()->role =='piDSSSalesClerk' || Auth::user()->role == 'piDSSAdministrator' )
+                        <x-nav-link :href="route('customer.index')" :active="request()->routeIs('dashboard')">
+                            {{ __('Customer Records') }}
+                        </x-nav-link>
+                    @endif
+                    @if(Auth::user()->role == 'RegisteredCustomer' )
+                        <x-nav-link :href="route(item.index)" :active="request()->routeIs('dashboard')">
+                            {{ __('Catalog') }}
+                        </x-nav-link>
+                    @endif
+
                 </div>
             </div>
 
