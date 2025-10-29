@@ -42,6 +42,9 @@
                             <x-nav-link :href="route('details')" :active="request()->routeIs('details')">
                                 {{ __('Solar PV System') }}
                             </x-nav-link>
+                            <x-nav-link :href="route('wishlist')" :active="request()->routeIs('wishlist')">
+                                {{ __('Wish List') }}
+                            </x-nav-link>
                         @endif
                     @endif
 
