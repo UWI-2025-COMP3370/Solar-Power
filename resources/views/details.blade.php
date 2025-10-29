@@ -45,11 +45,12 @@
                 </summary>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">
                     Solar PV systems can be divided into three main types: grid-tied, off-grid and hybrid systems.
-                    Grid-tied systems are connected to the public electricity grid which allows users to feed excess
-                    power back into the grid. Off-grid systems operate independently from the public grid and rely on
-                    batteries for storage, making them suitable for remote areas without grid access. Hybrid systems
-                    combine features of both, providing flexibility and backup power during outages.
                 </p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li>Grid-tied systems are connected to the public electricity grid which allows users to feed excess power back into the grid. </li>
+                    <li>Off-grid systems operate independently from the public grid and rely on batteries for storage, making them suitable for remote areas without grid access. </li>
+                    <li>Hybrid systems combine features of both, providing flexibility and backup power during outages.</li>
+                </ul>
             </details>
 
             <details class="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm">
