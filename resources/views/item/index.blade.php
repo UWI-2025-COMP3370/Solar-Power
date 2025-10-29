@@ -30,15 +30,18 @@
                         </x-primary-button>
                     </form>
                 @endif
-                {{-- Add to Wishlist for Registered Customers --}}
                 @if (Auth::user()->role == 'Registered Customer')
-                    <form method="POST" action="{{ route('wishlist.add', ['item' => $item->id, 'quantity' => 1]) }}" class="inline-block">
+                    <form method="GET" action="{{"wishList/addItemToList/".$item->id."/1/"}}"
+                        class="inline-block">
                         @csrf
-                        <x-primary-button class="mt-4 bg-pink-600 hover:bg-pink-700">
+                        @method('GET')
+                        <x-input-error :messages="$errors->get('message')" class="mt-2" />
+                        <x-primary-button class="mt-4">
                             {{ __('Add to Wish List') }}
                         </x-primary-button>
                     </form>
-                @endif
+            </div>
+        @endif
         @endforeach
     @endauth
 </x-app-layout>
