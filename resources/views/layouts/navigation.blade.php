@@ -28,7 +28,7 @@
                         </x-nav-link>
                     @endif
                     @if(Auth::user()->role == 'Registered Customer' )
-                        <x-nav-link :href="route(item.index)" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('item.index')" :active="request()->routeIs('item.index')">
                             {{ __('Catalog') }}
                         </x-nav-link>
                         <x-nav-link :href="route('details')" :active="request()->routeIs('dashboard')">

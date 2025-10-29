@@ -27,7 +27,7 @@
                     @endif
                     @if (Auth::user()->role == 'Registered Customer')
                         <div style="display: flex;flex-direction:column">
-                            <a href="{{ url('/item') }}">Click to view stock</a>
+                            <a href="{{ url('/item') }}">Click to view catalog</a>
                             <a href="{{ url('/wishlist') }}">Click here to view wishlist</a>
                             <a href="{{ url('/details') }}"> Click here for information on Photovoltaic Systems</a>
                         </div>
