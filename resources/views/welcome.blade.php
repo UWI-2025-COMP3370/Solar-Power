@@ -35,7 +35,7 @@
                 <div class="mt-16">
                     <h1 class="text-4xl font-bold text-gray-800 dark:text-white text-center">Welcome to piDSS System</h1>
                     <h1></h1>
-                    <a href="{{ url('/details') }}" class="dark:text-white text-center"> Click here to for information on Solar Photovoltaic Systems</a>
+                    <a href="{{ url('/details') }}" class="dark:text-white text-center"> Click here for information on Solar Photovoltaic Systems</a>
 
                 </div>
 
