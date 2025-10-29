@@ -11,7 +11,7 @@ class ItemPolicy
 public function list(User $user): bool
 {
 return $user->role == "piDSSAdministrator" ||
-$user->role == "RegisteredCustomer";
+$user->role == "Registered Customer";
 }
 public function create(User $user): bool
 {
@@ -24,7 +24,7 @@ return $user->role == "piDSSAdministrator";
 public function view(User $user, Item $item): bool
 {
 return $user->role == "piDSSAdministrator" ||
-$user->role == "RegisteredCustomer";
+$user->role == "Registered Customer";
 }
 public function delete(User $user, Item $item): bool
 {

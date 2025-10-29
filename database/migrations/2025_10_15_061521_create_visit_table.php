@@ -23,9 +23,6 @@ return new class extends Migration
             $table->string('condition');
             $table->integer('stories');
             $table->boolean('shaded');
-            $table->string('material');
-            $table->string('condition');
-            $table->int('stories');
             $table->text('notes');
             $table->timestamps();
         });
