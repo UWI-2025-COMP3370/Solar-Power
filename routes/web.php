@@ -14,7 +14,7 @@ Route::get('/', function () {
 
 Route::get('/details', function () {
     return view('details');
-});
+})->name('details');;
 
 // Auth & verified routes
 Route::middleware(['auth', 'verified'])->group(function () {
