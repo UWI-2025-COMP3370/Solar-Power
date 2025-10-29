@@ -27,7 +27,7 @@
                             {{ __('Solar PV System') }}
                         </x-nav-link>
                     @endif
-                    @if(Auth::user()->role == 'RegisteredCustomer' )
+                    @if(Auth::user()->role == 'Registered Customer' )
                         <x-nav-link :href="route(item.index)" :active="request()->routeIs('dashboard')">
                             {{ __('Catalog') }}
                         </x-nav-link>
