@@ -9,10 +9,10 @@
 
             <details class="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm">
                 <summary class="font-semibold text-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:rounded-md">
-                    What are solar photovoltaic (PV) systems?
+                    What are solar PV systems?
                 </summary>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">
-                    A solar photovoltaic (PV) system is a technology that converts sunlight directly into
+                    A solar PV system is a technology that converts sunlight directly into
                     electricity using solar panels composed of photovoltaic cells. It essentially transforms light
                     energy from the sun into usable electrical energy that can power homes, businesses and industries.
                 </p>
