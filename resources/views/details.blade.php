@@ -87,7 +87,7 @@
                     Benefits of PV systems:
                 </summary>
 
-                <ul>
+                <ul class="list-disc list-inside">
                     <li>Solar PV systems generate free electricity from sunlight, reducing your reliance on the utility grid.</li>
                     <li>Any excess energy can often be sold back to the grid, providing additional savings or income.</li>
                     <li>Solar PV systems produce clean, renewable energy with no greenhouse gas emissions or air pollution.</li>
