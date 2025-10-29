@@ -25,11 +25,14 @@
                 <p class="mt-2 text-gray-700 dark:text-gray-300">
                     A solar PV system consists of several key components that work together to generate, manage and
                     deliver power. These include solar panels, an inverter, a mounting structure and cabling.
-                    Each solar panel contains many small photovoltaic cells made of semiconductor materials, such as
-                    silicon, and these cells absorb sunlight and generate direct current (DC) electricity.
                     Additionally, batteries and charge controllers are often used.
                     Since most electrical appliances and grid systems operate on alternating current (AC), the DC
-                    electricity must be converted. An inverter converts the DC output from these cells into
+                    electricity must be converted.
+                    Each solar panel contains many small photovoltaic cells made of semiconductor materials, such as
+                    silicon, and these cells absorb sunlight and generate direct current (DC) electricity.
+                </p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                    An inverter converts the DC output from these cells into
                     alternating current (AC) power that can be used to run household appliances, lighting and other
                     electrical systems.
                     The mounting structure ensures that the panels are securely positioned on rooftops or the ground at
