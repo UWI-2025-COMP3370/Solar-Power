@@ -20,6 +20,11 @@
                             <a href="{{ url('/visit') }}">Click to list site visit information in piDSS</a>
                         </div>
                     @endif
+                    @if(Auth::user()->role == 'RegisteredCustomer' )
+                        <div>
+                            <a href="{{ url('/item') }}">Click to view stock</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
