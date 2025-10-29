@@ -73,4 +73,8 @@
 
         </div>
     </div>
+    <!-- Back Button -->
+    <x-primary-button class="mt-4 bg-gray-500 hover:bg-gray-600">
+        <a href="{{ url()->previous() }}">{{ __('Back') }}</a>
+    </x-primary-button>
 </x-app-layout>
