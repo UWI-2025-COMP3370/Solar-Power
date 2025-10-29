@@ -9,7 +9,7 @@
 
             <details class="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm">
                 <summary class="font-semibold text-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:rounded-md">
-                    What are solar PV systems?
+                    What is a solar PV systems?
                 </summary>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">
                     A solar PV system is a technology that converts sunlight directly into
@@ -24,8 +24,8 @@
                 </summary>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">
                     A solar PV system consists of several key components that work together to generate, manage and
-                    deliver power. These include solar panels, an inverter, a mounting structure and cabling.
-                    Additionally, batteries and charge controllers are often used.
+                    deliver power. These include <b>solar panels</b>, <b>an inverter</b>, <b>a mounting structure</b> and <b>cabling</b>.
+                    Additionally, <b>batteries</b> and <b>charge controllers</b> are often used.
                     Since most electrical appliances and grid systems operate on alternating current (AC), the DC
                     electricity must be converted.
                     Each solar panel contains many small photovoltaic cells made of semiconductor materials, such as
@@ -50,9 +50,9 @@
                     Solar PV systems can be divided into three main types: grid-tied, off-grid and hybrid systems.
                 </p>
                 <ul class="list-disc list-inside mt-2 space-y-1">
-                    <li>Grid-tied systems are connected to the public electricity grid which allows users to feed excess power back into the grid. </li>
-                    <li>Off-grid systems operate independently from the public grid and rely on batteries for storage, making them suitable for remote areas without grid access. </li>
-                    <li>Hybrid systems combine features of both, providing flexibility and backup power during outages.</li>
+                    <li><b>Grid-tied systems</b> are connected to the public electricity grid which allows users to feed excess power back into the grid. </li>
+                    <li><b>Off-grid systems</b> operate independently from the public grid and rely on batteries for storage, making them suitable for remote areas without grid access. </li>
+                    <li><b>Hybrid systems</b> combine features of both, providing flexibility and backup power during outages.</li>
                 </ul>
             </details>
 
