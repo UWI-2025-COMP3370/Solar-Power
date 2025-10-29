@@ -2,34 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ShoppingCart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
+use App\Models\WishList;
 use Illuminate\View\View;
 
 class WishListController extends Controller
 {
     /**
-     * Add the item to the user's list.
+     * Add the item to the user's wishlist.
      */
-    public function addItemToList(string $id, string $quantity):view
+    public function addItemToList(string $id, string $quantity): View
     {
-        // Gate::authorize('view', $item);
-        $item = Item::find($id);
-        $list_id = Auth::user()->wishList->id;
-        $exists = Auth::user()->wishList->item()->where('item_id', $id)->first();
+        $user = Auth::user();
+
+        // Create wishlist if it doesn't exist
+        $wishList = $user->wishList()->firstOrCreate([]);
+
+        $item = Item::findOrFail($id);
+
+        // Check if the item already exists in wishlist
+        $exists = $wishList->items()->where('item_id', $id)->first();
 
         if ($exists) {
-            //$exists->increment('quantity');
-
-Auth::user()->wishList->item()->increment('quantity', 1);
+            // Increment only this pivot record’s quantity
+            $wishList->items()->updateExistingPivot($id, [
+                'quantity' => $exists->pivot->quantity + $quantity,
+            ]);
         } else {
-            $item->wishList()->attach(
-                $list_id,
-                ['quantity' => $quantity]
-            );
+            // Attach new item with initial quantity
+            $wishList->items()->attach($id, [
+                'quantity' => $quantity,
+            ]);
         }
-        return view('wishlist.show', ['item' => $item]);
+
+        // Reload wishlist items for the view
+        $wishList->load('items');
+
+        return view('wishlist.show', ['wishList' => $wishList]);
     }
 }

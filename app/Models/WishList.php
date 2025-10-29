@@ -16,7 +16,7 @@ class WishList extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function item(): BelongsToMany
+    public function items(): BelongsToMany
     {
         return $this->belongsToMany(Item::class)
             ->withPivot('quantity');
