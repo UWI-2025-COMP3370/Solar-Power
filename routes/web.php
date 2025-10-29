@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\VisitController;
+use App\Http\Controllers\ItemController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,5 +26,8 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('visit', VisitController::class)
     ->middleware(['auth', 'verified']);
+
+Route::resource('visit', ItemController::class)
+    ->middleware(['item', 'verified']);
 
 require __DIR__.'/auth.php';
