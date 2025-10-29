@@ -1,21 +1,21 @@
-<?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 use App\Models\WishList;
-use Illuminate\View\View;
 
 class WishListController extends Controller
 {
     /**
      * Add the item to the user's wishlist.
      */
-    public function addItemToList(string $id, string $quantity): View
+    public function addItemToList(Request $request, string $id)
     {
         $user = Auth::user();
+
+        // Default quantity = 1 if not passed
+        $quantity = (int) $request->input('quantity', 1);
 
         // Create wishlist if it doesn't exist
         $wishList = $user->wishList()->firstOrCreate([]);
@@ -26,7 +26,7 @@ class WishListController extends Controller
         $exists = $wishList->items()->where('item_id', $id)->first();
 
         if ($exists) {
-            // Increment only this pivot record’s quantity
+            // Increment the existing quantity
             $wishList->items()->updateExistingPivot($id, [
                 'quantity' => $exists->pivot->quantity + $quantity,
             ]);
@@ -37,9 +37,10 @@ class WishListController extends Controller
             ]);
         }
 
-        // Reload wishlist items for the view
-        $wishList->load('items');
+        // Option 1: redirect back to wishlist page
+        return redirect()->route('wishlist.show')->with('success', 'Item added to wishlist.');
 
-        return view('wishlist.show', ['wishList' => $wishList]);
+        // Option 2: if you want to return JSON (AJAX)
+        // return response()->json(['success' => true]);
     }
 }
