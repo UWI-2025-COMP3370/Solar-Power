@@ -12,6 +12,7 @@
                         <th class="border-b border-gray-300 dark:border-gray-700 p-2 text-left">Product</th>
                         <th class="border-b border-gray-300 dark:border-gray-700 p-2 text-center">Quantity</th>
                         <th class="border-b border-gray-300 dark:border-gray-700 p-2 text-right">Price</th>
+                        <th class="border-b border-gray-300 dark:border-gray-700 p-2 text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,16 +28,26 @@
                             <td class="p-2 text-right">
                                 $<span x-text="formatPrice(itemTotals[{{ $item->id }}] ?? {{ $item->price * ($item->pivot->quantity ?? 1) }})"></span>
                             </td>
+                            <td class="p-2 text-center">
+                                <form method="POST" action="{{ route('wishlist.remove', $item->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded">
+                                        Remove
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="3" class="p-2">Your wishlist is empty.</td>
+                            <td colspan="4" class="p-2">Your wishlist is empty.</td>
                         </tr>
                     @endforelse
                     <tr>
                         <td class="p-2 font-bold">Total:</td>
                         <td></td>
                         <td class="p-2 font-bold text-right">$<span x-text="formatPrice(total)"></span></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
