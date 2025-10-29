@@ -22,9 +22,17 @@
                             {{ __('Customer Records') }}
                         </x-nav-link>
                     @endif
+                    @if(Auth::user()->role == 'piDSSAdministrator' )
+                        <x-nav-link :href="route('details')" :active="request()->routeIs('dashboard')">
+                            {{ __('Solar PV System') }}
+                        </x-nav-link>
+                    @endif
                     @if(Auth::user()->role == 'RegisteredCustomer' )
                         <x-nav-link :href="route(item.index)" :active="request()->routeIs('dashboard')">
                             {{ __('Catalog') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('details')" :active="request()->routeIs('dashboard')">
+                            {{ __('Solar PV System') }}
                         </x-nav-link>
                     @endif
 

@@ -20,6 +20,11 @@
                             <a href="{{ url('/visit') }}">Click to list site visit information in piDSS</a>
                         </div>
                     @endif
+                    @if ( Auth::user()->role == 'piDSSAdministrator')
+                        <div>
+                            <a href="{{ url('/details') }}"> Click here for information on Photovoltaic Systems</a>
+                        </div>
+                    @endif
                     @if (Auth::user()->role == 'Registered Customer')
                         <div style="display: flex;flex-direction:column">
                             <a href="{{ url('/item') }}">Click to view stock</a>
