@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 Route::resource('visit', VisitController::class)
     ->middleware(['auth', 'verified']);
 
-Route::resource('visit', ItemController::class)
+Route::resource('item', ItemController::class)
     ->middleware(['item', 'verified']);
 
 require __DIR__.'/auth.php';
