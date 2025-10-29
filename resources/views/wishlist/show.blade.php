@@ -1,28 +1,37 @@
 <x-app-layout>
     @auth
-        <table class="dark:text-white">
-    <tr>
-        <th>Product</th><th>Price</th>
-@php
-$total = 0
-@endphp
-    </tr>
-@csrf
-    @foreach(Auth::user()->wishList->item as $item)
-        <tr>
-            <td>{{ $item->name }}</td>
-            <td>${{ $item->price }}</td>
-@php
-$total +=$item->price;
-@endphp
-        </tr>
-    @endforeach
-<tr>
-<td>
-Total: ${{ $total }}
-</td>
-</tr>
-</table>
+        @php
+            $user = Auth::user();
+            $wishList = $user->wishList;
+            $total = 0;
+        @endphp
 
-@endauth
+        <table class="dark:text-white w-full border-collapse">
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+
+            @csrf
+
+            @if($wishList && $wishList->items->count())
+                @foreach($wishList->items as $item)
+                    <tr>
+                        <td>{{ $item->name }}</td>
+                        <td>${{ number_format($item->price, 2) }}</td>
+                        @php $total += $item->price; @endphp
+                    </tr>
+                @endforeach
+
+                <tr>
+                    <td><strong>Total:</strong></td>
+                    <td><strong>${{ number_format($total, 2) }}</strong></td>
+                </tr>
+            @else
+                <tr>
+                    <td colspan="2">Your wishlist is empty.</td>
+                </tr>
+            @endif
+        </table>
+    @endauth
 </x-app-layout>
