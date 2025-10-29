@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('item_wish_list', function (Blueprint $table) {
@@ -19,17 +16,17 @@ return new class extends Migration
             $table->foreignId('wish_list_id')
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->integer('quantity');
-
+            $table->integer('quantity')->default(1);
             $table->timestamps();
+
+            $table->unique(['wish_list_id', 'item_id']);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('item_wish_list');
     }
+};
+
 };
